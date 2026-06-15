@@ -1,0 +1,11 @@
+import express from "express";
+import { authentication } from "../../Backend/mddleware/authentication.js";
+import authorization from "../../Backend/mddleware/authorization.js";
+import { getnotes,getbyid , addnotes , editnotes , removenotes } from "../Controller/notes.controller.js";
+const notesRoutes = express.Router();
+notesRoutes.get("/" , authentication , authorization("writer") , getnotes );
+notesRoutes.get("/:id" , authentication , authorization("writer") , getbyid);
+notesRoutes.post("/add" , authentication , authorization("writer") , addnotes);
+notesRoutes.patch("/edit/:id" , authentication , authorization("writer") , editnotes);
+notesRoutes.delete("/delete/:id" , authentication, authorization("writer") , removenotes);
+export default notesRoutes;
