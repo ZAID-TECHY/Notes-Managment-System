@@ -3,7 +3,7 @@
    Base URL: http://localhost:4900
    ==================================================== */
 
-const API = 'https://notes-managment-system.onrender.com';
+const API = 'https://notes-app-backend-79tu.onrender.com';
 const NOTE_COLORS = ['#58A6FF','#3FB950','#D29922','#BC8CFF','#F78166','#39C5CF'];
 
 // ─────────────────────────────────────────────
